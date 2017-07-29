@@ -1,0 +1,139 @@
+/* ---------------------------- */
+/*  =    Tutorial 5 Styles    = */
+/* ---------------------------- */
+
+/* Clear document margins and padding */
+html 
+{
+    height: 100%;
+}
+
+body
+{
+	font-family: tahoma, arial, helvetica;
+	font-size: 12px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+	color: #444444;
+	background-color: #f5f5f5;
+}
+
+/* Basic styles */
+
+h1 {
+	font-size: 22px;
+	border-bottom: 1px dotted silver;
+}
+
+a {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+/* Special text styles */
+#logo {
+	color: #ffffff;
+	letter-spacing: -2px;
+	font-size: 50px;
+	padding: 20px 0px 0px 30px;
+}
+
+
+/*  Page layout (a table with 3 rows and 3 columns) */
+#pageLayout {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+/* Rows */
+#R1, #R2, #R3 {
+	display: table-row;
+}
+
+/* Cells */
+#R1C1, #R1C2, #R1C3,
+#R2C1, #R2C2, #R2C3,
+#R3C1, #R3C2, #R3C3 {
+	display: table-cell
+}
+
+/* Set the height of rows 1 et 3 */
+#R1, #R3 {
+	height: 40px;
+}
+
+/* Set the width of cell R2C2 */
+#R2C2 {
+	width: 800px;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+}
+
+/*  Content layout (a table with 2 rows) */
+#content {
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative; /* <======================== IMPORTANT, IF YOU WANT TO DO ABSOLUTE POSITIONING INSIDE THIS DIV */
+}
+
+/* Rows */
+#header, #article, #footer {
+	display: table-row;
+}
+
+#header {
+	background-image: url(../images/header.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -150px;
+	height: 220px;
+}
+
+#footer {
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	background-color: #cccccc;
+}
+
+/*  Article layout (a table with 2 columns */
+
+#articleColumns {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#leftColumn, #rightColumn {
+	padding: 20px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+#rightColumn {
+	width: 200px;
+	border-left: 1px solid #cccccc;
+	background-color: #eeeeee;
+}
+
+/* Navigation bar */
+
+#navigation {
+	position: absolute;
+	left: 20px;
+	top: 180px;
+	width: 500px;
+	height: 20px;
+	border: 1px solid #ffffff;
+}
+
+#navigation a {
+	font-size: 14px;
+	color: #ffffff;
+}
